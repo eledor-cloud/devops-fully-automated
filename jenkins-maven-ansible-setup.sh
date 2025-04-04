@@ -6,7 +6,7 @@ sudo yum update –y
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key # Note: Refer this link to change this key line frequently https://pkg.jenkins.io/redhat-stable/
 sudo yum upgrade
-sudo amazon-linux-extras install java-openjdk11 -y
+sudo yum install fontconfig java-17-openjdk -y
 sudo yum install jenkins -y
 sudo echo "jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 sudo systemctl enable jenkins
